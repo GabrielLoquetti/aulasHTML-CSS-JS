@@ -1,0 +1,41 @@
+body {
+    font-family: 'arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    text-align: center; /* ALINHAR O CONTEUDO NO CENTRO*/
+}
+
+header {
+    background: #4caf50;
+    color: white;
+    padding: 2rem; /* PREENCHE O CABEÇALHO INTEIRO DA MESMA COR VERDE*/
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem; /* MARGEM DE BAIXO */
+}
+
+main {
+    padding: 2rem; /* COLOCANDO MAIS OU MENOS UMA MARGEM EM VOLTA DELE*/
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto; /* DEIXA O FORM NO CENTRO DA TELA */
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%; /* AUMENTA A LARGURA DO INPUT */
+    padding: 1rem; /* AUMENTA A ALTURA DO INPUT */
+    margin-top: 1rem; /* MARGEM DE CIMA E DE BAIXO */
+    border: 1px solid #ccc; /* BORDA */
+    border-radius: 10px;
+
+}

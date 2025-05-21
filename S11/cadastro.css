@@ -1,0 +1,106 @@
+body{
+    background: linear-gradient(135deg, #4caf50, #2196F3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.container{
+    width: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button{
+    background: linear-gradient(to right, #4caf50, #2196F3);
+    color: #f9f9f9;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: #175330;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+*{
+    box-sizing: border-box;
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.cadastro-box{
+    background: #f9f9f9;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.cadastro-box h1{
+    margin-bottom: 0.5ren;
+    font-size: 2rem;
+    color: #333;
+}
+
+.cadastro-box p{
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+
+form input{
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    transition: border color 0.3s ease;
+}
+
+form input:focus{
+    border-color: #4caf50;
+    outline: none;
+}
+
+
+
+.register{
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.register a{
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register a:hover{
+    text-decoration: underline;
+}
