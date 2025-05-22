@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* O ROOT É DIGAMOS QUE A RAÍZ DO CSS, QUANDO USAMOS ELE ESTAMOS FAZENDO UM CONJUNTO DE REGRAS/PADRÕES 
+CRIAMOS AS VARIÁVEIS QUE VAMOS UTILIZAR AO DECORRER DO CÓDIGO CSS */
+:root {
+    --branco-principal: #FFFFFF;
+    --cor-de-fundo: #000000;
+    --botao-azul: #167bf7;
+    --botao-azul-efeito: #3c92fa;
+    --cinza-secundario: #c0c0c0;
+    --fonte-principal: "inter", sans-serif;
+    --fonte-size-principal: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    color: var(--branco-principal);
+    font-size: var(--fonte-size-principal);
+    font-weight: 400;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+}
+
+.principal {
+    background-image: url(/alura-plus/assets/Background.png);
+    background-repeat: no-repeat;
+    align-items: center; /* AQUI ESTAMOS ALINHANDO OS ITENS E TEXTOS */
+    text-align: center;
+
+}
