@@ -36,5 +36,43 @@ body {
     background-repeat: no-repeat;
     align-items: center; /* AQUI ESTAMOS ALINHANDO OS ITENS E TEXTOS */
     text-align: center;
+}
 
+.container__caixa {
+    margin: 0  10em;
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2rem; /* AJUSTA O VALOR PARA ESPAÇO ENTRE LINHAS */
+    max-width: 40rem; /* AJUSTA O VALOR PARA OBTER 3 LINHAS */
+}
+
+.container__img {
+    margin: 1em 0 2em 0;
+}
+
+.container__botao {
+    display: block;
+    text-decoration: none;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    color: var(--branco-principal);
+    font-size: var(--fonte-size-principal);
+    font-weight: 400;
+}
+
+.botao__secundario {
+    background-color: transparent;
+    border: var(--branco-principal) 1px solid;
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--branco-principal);
+    margin-top: 1em;
 }
