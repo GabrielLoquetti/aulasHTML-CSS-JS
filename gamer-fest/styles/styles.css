@@ -1,0 +1,64 @@
+/* Fonte: Orbitron 
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap');
+
+:root {
+    --fonte-principal: 'Orbitron', 'sans-serif';
+    --cor-fundo: #0d0d0d;
+    --cor-texto: #FFFFFF;
+    --cor-primaria: #00d4ff;
+    --cor-primaria-escura: #0050ff;
+    --cor-cabecalho: #111111;
+    --cor-cartao-fundo: #1a1a1a;
+    --sombra: 0 0 0.625rem var(--cor-primaria);
+    --sombra-hover: 0 0 1.25rem var(--cor-primaria), 0 0 2.5rem var(--cor-primaria-escura);
+    --font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+header {
+    width: 100%;
+    top: 0;
+    position: fixed;
+}
+
+header nav{
+    display: flex;
+    justify-content: right;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 200px;
+    height: 100;
+}
+
+.container-titulo {
+    align-items: center;
+    text-align: center;
+}
+
+.btn-cta {
+    margin-top: 30px;
+    background-color: var(--cor-primaria);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--cor-texto);
+    display: block;
+    text-decoration: none;
+}
+
