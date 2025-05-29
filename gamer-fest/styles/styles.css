@@ -34,7 +34,6 @@ body {
 header {
     width: 100%;
     top: 0;
-    
 }
 
 header nav{
@@ -50,6 +49,10 @@ header nav a {
     color: var(--cor-texto);
     font-size: var(--font-size);
     margin-top: -50px;
+    transition: transform 0.5s;
+}
+header nav a:hover{
+    color: var(--cor-primaria-escura);
 }
 
 .logo img {
@@ -104,12 +107,12 @@ h2 {
     border-radius: 10px;
     width: 500px;
     height: 400;
-    transition: transform 0.5s;
+    transition: transform 0.7s;
 }
 
 .container-sub2 img:hover {
     transform: scale(1.1);
-    box-shadow: var(--sombra-hover);
+    box-shadow: var(--sombra);
 }
 
 .btns-3 {
@@ -135,7 +138,7 @@ h2 {
 }
 
 .btns-3 a:hover {
-    transform: scale(2.2);
+    transform: scaleY(0.6);
     box-shadow: var(--sombra-hover);
 }
 
@@ -226,6 +229,6 @@ h2 {
     margin-top: 15px;
 }
 
-button:hover {
-    transform: scale(1.1);
+.fim {
+    margin-bottom: 30px;
 }
