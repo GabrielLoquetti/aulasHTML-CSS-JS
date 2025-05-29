@@ -34,7 +34,7 @@ body {
 header {
     width: 100%;
     top: 0;
-    position: fixed
+    
 }
 
 header nav{
@@ -68,13 +68,22 @@ header nav a {
     margin-bottom: 45px;
 }
 
+
 .btn-cta {
+    width: 324px;
+    font-family: var(--fonte-principal);
     margin-top: 50px;
     background: linear-gradient(to right, #00D4FF, #0050FF);
     border-radius: 30px;
     padding: 1em;
     color: var(--cor-texto);
     text-decoration: none;
+    transition: transform 0.5s;
+}
+
+.btn-cta:hover {
+    transform: scale(1.1);
+    box-shadow: var(--sombra-hover);
 }
 
 .container-sub2 {
@@ -95,6 +104,12 @@ h2 {
     border-radius: 10px;
     width: 500px;
     height: 400;
+    transition: transform 0.5s;
+}
+
+.container-sub2 img:hover {
+    transform: scale(1.1);
+    box-shadow: var(--sombra-hover);
 }
 
 .btns-3 {
@@ -116,4 +131,101 @@ h2 {
     box-shadow: var(--sombra2);
     border-radius: 10px;
     margin-right: 10px;
+    transition: transform 0.5s;
+}
+
+.btns-3 a:hover {
+    transform: scale(2.2);
+    box-shadow: var(--sombra-hover);
+}
+
+.container-sub3 {
+    align-items: center;
+    text-align: center;
+}
+
+.subtitulo {
+    margin-bottom: 30px;
+}
+
+.ingressos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size);
+}
+
+.ingresso-comum {
+    width: 300px;
+    height: 185.95px;
+    padding: 1em;
+    background-color: #1A1A1A;
+    box-shadow: var(--sombra);
+    border-radius: 10px;
+    margin-right: 40px;
+}
+
+.vip-meet {
+    width: 300px;
+    height: 185.95px;
+    padding: 1em;
+    background-color: #1A1A1A;
+    box-shadow: var(--sombra);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.titulo-ingresso {
+    margin-bottom: 30px;
+}
+
+.ingressos p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.sub3 {
+    margin-top: 10px;
+}
+
+.inscrevase {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+ input[type="text"] {
+    margin-bottom: 10px;
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+.inscrevase button {
+    font-family: var(--fonte-principal);
+    margin-top: 2px;
+    width: 400px;
+}
+
+.rodape {
+    margin-top: 40px ;
+    border-top: 1px solid var(--cor-primaria);
+    align-items: center;
+    text-align: center;
+}
+
+.siganos {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.rodape p {
+    margin-top: 15px;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
