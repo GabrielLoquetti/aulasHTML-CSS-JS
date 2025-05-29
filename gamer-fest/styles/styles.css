@@ -12,6 +12,7 @@
     --cor-cabecalho: #111111;
     --cor-cartao-fundo: #1a1a1a;
     --sombra: 0 0 0.625rem var(--cor-primaria);
+    --sombra2: 0 0 0.1rem var(--cor-primaria);
     --sombra-hover: 0 0 1.25rem var(--cor-primaria), 0 0 2.5rem var(--cor-primaria-escura);
     --font-size: 16px;
 }
@@ -33,13 +34,22 @@ body {
 header {
     width: 100%;
     top: 0;
-    position: fixed;
+    position: fixed
 }
 
 header nav{
     display: flex;
     justify-content: right;
+    border-bottom: 1px solid var(--cor-primaria);
+}
+
+header nav a {
+    justify-content: space-between;
+    margin-right: 15px;
     text-decoration: none;
+    color: var(--cor-texto);
+    font-size: var(--font-size);
+    margin-top: -50px;
 }
 
 .logo img {
@@ -52,13 +62,58 @@ header nav{
     text-align: center;
 }
 
+.container-titulo h2 {
+    margin-top: 130px;
+    font-size: 48px;
+    margin-bottom: 45px;
+}
+
 .btn-cta {
-    margin-top: 30px;
-    background-color: var(--cor-primaria);
-    border-radius: 5px;
+    margin-top: 50px;
+    background: linear-gradient(to right, #00D4FF, #0050FF);
+    border-radius: 30px;
     padding: 1em;
     color: var(--cor-texto);
-    display: block;
     text-decoration: none;
 }
 
+.container-sub2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 100px;
+    align-items: center;
+    text-align: center;
+}
+
+.container-sub2 img {
+    margin-right: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    width: 500px;
+    height: 400;
+}
+
+.btns-3 {
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.btns-3 nav a {
+    margin-top: 50px;
+    padding: 1em;
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+.btns-3 a {
+    padding: 1em;
+    background-color: #1A1A1A;
+    box-shadow: var(--sombra2);
+    border-radius: 10px;
+    margin-right: 10px;
+}
