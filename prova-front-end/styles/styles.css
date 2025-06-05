@@ -1,0 +1,120 @@
+:root {
+    --cor-fundo: #f9f9f9;
+    --cor-texto: #004d40;
+    --cor-principal: #00796b;
+    --cor-botao-hover: #004d40;
+
+    --sombra-botao: rgba(0, 121, 107, 0.4);
+    --sombra-botao-hover: rgba(0, 77, 64, 0.7);
+
+    --sombra-container: rgba(0, 0, 0, 0.15);
+    --sombra-imagem: rgba(0, 0, 0, 0.1);
+
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: var(--cor-fundo);
+    text-align: center;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+header .logo {
+    text-align: left;
+    width: 219px;
+    height: 72px;
+}
+
+header .menu {
+    font-family: var(--fonte-principal);
+    text-align: right;
+    margin-right: 2rem;
+    align-items: center;
+}
+
+header a {
+    color: var(--cor-texto);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.titulo {
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+    margin-top: 4rem;
+    font-size: 48px;
+}
+
+.subtitulo {
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+    font-size: 19.2px;
+}
+
+.imagens .titulo-img {
+    margin-top: 3rem;
+    font-family: var(--fonte-principal);
+    font-size: 28.8px;
+    color: var(--cor-principal);
+}
+
+.imagens img {
+    width: 280px;
+    height: 180px;
+    border-radius: 10px;
+    margin: 5px;
+    margin-top: 10px;
+    box-shadow: var(--sombra-imagem);
+}
+
+.imagens img:hover {
+    box-shadow: var(--sombra-imagem);
+}
+
+.cta p {
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    font-size: 16px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cta .botao {
+    background-color: var(--cor-principal);
+    text-decoration: none;
+    font-size: 17.6px;
+    padding: 0.8rem;
+    padding-right: 35px;
+    padding-left: 35px;
+    border-radius: 10px;
+    color: var(--cor-fundo);
+    font-family: var(--fonte-principal);
+    box-shadow: var(--sombra-botao);
+    margin: 6px;
+}
+
+.cta .botao:hover {
+    background-color: var(--cor-botao-hover);
+    box-shadow: var(--sombra-botao-hover);
+}
+
+footer {
+    margin-top: 7rem;
+    color: var(--cor-texto);
+    font-family: var(--fonte-principal);
+    font-size: medium;
+}
