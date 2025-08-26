@@ -11,8 +11,15 @@ body {
 }
 
 h1 {
+    text-align: center;
     color: #333;
     margin-bottom: 20px;
+}
+
+.searchBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
 }
 
 input[type="text"] {

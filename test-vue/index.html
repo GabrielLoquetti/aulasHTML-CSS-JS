@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor Vue ao Vivo</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h2>Pré-visualização:</h2>
+        <div class="preview">{{ codigo }}</div>
+
+        <h2>Digite seu código:</h2>
+        <textarea v-model="codigo" placeholder="Digite aqui seu código..."></textarea>
+    </div>
+    <script src="vue.js"></script>
+</body>
+</html>
