@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedbacks sobre o MVP do projeto - Descarte de Lixo Eletrônico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Feedbacks sobre o MVP do projeto</h1>
+        <p>
+            Nosso MVP é um aplicativo para facilitar o descarte consciente de lixo eletrônico. Ele permite que os usuários localizem pontos de coleta em sua região e obtenham informações sobre reciclagem.
+        </p>
+        <form id="feedbackForm" action="https://formspree.io/f/mwpnqweb" method="POST">
+            <label for="identifica">1. Qual funcionalidade você gostaria que tivesse em nosso MVP?</label>
+            <input id="identifica" name="1. Qual funcionalidade você gostaria que tivesse em nosso MVP?" rows="2" required></input>
+
+            <label for="descarta">2. Qual sua maior dificuldade ao descartar lixo eletrônico?</label>
+            <input id="descarta" name="2. Qual sua maior dificuldade ao descartar lixo eletrônico?" rows="2" required></input>
+
+            <label for="beneficios">3. Na sua opinião, quais são os benefícios de descartar o lixo eletrônico de forma correta?</label>
+            <input id="beneficios" name="3. Na sua opinião, quais são os benefícios de descartar o lixo eletrônico de forma correta?" rows="2" required></input>
+
+            <label for="aspecto">4. A localidade de descarte de lixo eletrônico em nosso MVP é viável para você?</label>
+            <input id="aspecto" name="4. A localidade de descarte de lixo eletrônico em nosso MVP é viável para você?" rows="2" required></input>
+
+            <label>5. De 0 a 5, quanto você classificaria a experiência ao usar nosso MVP?</label>
+            <div class="scale">
+                <label><input type="radio" name="5. De 0 a 5, quanto você classificaria a experiência ao usar nosso MVP?" value="1" required> 1</label>
+                <label><input type="radio" name="5. De 0 a 5, quanto você classificaria a experiência ao usar nosso MVP?" value="2"> 2</label>
+                <label><input type="radio" name="5. De 0 a 5, quanto você classificaria a experiência ao usar nosso MVP?" value="3"> 3</label>
+                <label><input type="radio" name="5. De 0 a 5, quanto você classificaria a experiência ao usar nosso MVP?" value="4"> 4</label>
+                <label><input type="radio" name="5. De 0 a 5, quanto você classificaria a experiência ao usar nosso MVP?" value="5"> 5</label>
+            </div>
+
+            <label for="sugestao">6. Na sua opinião, o que não pode faltar neste projeto para que ele seja funcional e relevante?</label>
+            <input id="sugestao" name="6. Na sua opinião, o que não pode faltar neste projeto para que ele seja funcional e relevante?" rows="2" required></input>
+
+            <button type="submit">Enviar feedback</button>
+        </form>
+
+        <div class="success-message" id="successMessage">
+            Feedback enviado com sucesso!
+        </div>
+        
+        <script>
+            document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+                setTimeout(function() {
+                    document.getElementById('successMessage').style.display = 'block';
+                }, 1000);
+            });
+        </script>
+</body>
+</html>
