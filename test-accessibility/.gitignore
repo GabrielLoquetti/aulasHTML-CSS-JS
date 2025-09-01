@@ -1,0 +1,37 @@
+Configuração inicial
+
+    -- Criem uma página HTML com uma estrutura básica, contendo:
+    -- uma seção principal com uma imagem do produto.
+    um título e uma descrição.
+    botões de "Adicionar ao carrinho" e "Saiba mais".
+
+    Aplicação de transições CSS
+    Adicionem uma transição CSS suave para o efeito hover sobre a imagem do produto, que a amplie levemente e aumente a opacidade.
+    Adicionem uma transição para os botões, alterando a cor de fundo e aumentando a borda ao passar o mouse.
+
+    Animação com JavaScript
+    Ao carregarem a página, apliquem uma animação JavaScript para que o título e a descrição “deslizem” de baixo para cima.
+    Usem setTimeout ou requestAnimationFrame para fazer com que o título e a descrição apareçam um após o outro, criando uma sensação de sequência na animação.
+
+    Animação com biblioteca (GSAP ou Anime.js)
+    Importem GSAP ou Anime.js no seu projeto.
+    Apliquem uma animação de rotação leve para a imagem do produto ao carregar a página, utilizando a biblioteca.
+    Usem a biblioteca para animar o botão "Adicionar ao carrinho" com um efeito de “pulsar” a cada poucos segundos, chamando a atenção do usuário.
+
+Passo a passo
+    Passo 1: Estrutura HTML
+    Criem a estrutura básica do HTML com <section> para a área do produto, <img> para a imagem, <h1> e <p> para título e descrição, e <button> para os botões.
+
+    Passo 2: CSS com Transições
+    Adicionem estilos para a imagem, título, descrição e botões.
+    Usem transition em hover para aplicar o efeito de ampliação e opacidade na imagem.
+    Apliquem uma transição suave nos botões para mudar a cor de fundo e borda ao passar o mouse.
+
+    Passo 3: JavaScript para Animações ao Carregar
+    Usem JavaScript para criar uma animação de "slide" para o título e descrição ao carregar a página.
+    Apliquem transform e opacity com um setTimeout ou requestAnimationFrame.
+
+    Passo 4: Biblioteca GSAP ou Anime.js
+    Importem GSAP ou Anime.js no HTML.
+    Criem uma animação para rotacionar a imagem do produto de maneira sutil ao carregar a página.
+    Apliquem uma animação de "pulsar" no botão "Adicionar ao carrinho" para que ele escale levemente em um intervalo definido.
