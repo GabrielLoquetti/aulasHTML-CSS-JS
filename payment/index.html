@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Online - Sistema de Pagamento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🛍️ MinhaLoja</h1>
+            <nav class="nav">
+                <div id="user-info" class="user-info hidden">
+                    <span id="user-name"></span>
+                    <button id="logout-btn" class="btn btn-outline">Sair</button>
+                </div>
+                <button id="login-btn" class="btn btn-primary">Entrar</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <h2 class="section-title">Nossos Produtos</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Smartphone" class="product-image">
+                    <h3 class="product-title">Smartphone Pro</h3>
+                    <p class="product-price">R$ 1.299,00</p>
+                    <button class="btn btn-primary buy-btn" data-product="Smartphone Pro" data-price="1299.00">
+                        Comprar Agora
+                    </button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Notebook" class="product-image">
+                    <h3 class="product-title">Notebook Gamer</h3>
+                    <p class="product-price">R$ 2.499,00</p>
+                    <button class="btn btn-primary buy-btn" data-product="Notebook Gamer" data-price="2499.00">
+                        Comprar Agora
+                    </button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Fone" class="product-image">
+                    <h3 class="product-title">Fone Wireless</h3>
+                    <p class="product-price">R$ 299,00</p>
+                    <button class="btn btn-primary buy-btn" data-product="Fone Wireless" data-price="299.00">
+                        Comprar Agora
+                    </button>
+                </div>
+                
+                <div class="product-card">
+                    <img src="/placeholder.svg?height=200&width=200" alt="Smartwatch" class="product-image">
+                    <h3 class="product-title">Smartwatch Sport</h3>
+                    <p class="product-price">R$ 599,00</p>
+                    <button class="btn btn-primary buy-btn" data-product="Smartwatch Sport" data-price="599.00">
+                        Comprar Agora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Login/Register Modal -->
+    <div id="auth-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="modal-close" id="close-modal">&times;</button>
+            
+            <!-- Login Form -->
+            <div id="login-form" class="auth-form">
+                <h2 class="form-title">Entrar na Conta</h2>
+                <form id="login-form-element">
+                    <div class="form-group">
+                        <label for="login-email">E-mail</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Senha</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Entrar</button>
+                </form>
+                <p class="form-switch">
+                    Não tem conta? <a href="#" id="show-register">Criar conta</a>
+                </p>
+            </div>
+
+            <!-- Register Form -->
+            <div id="register-form" class="auth-form hidden">
+                <h2 class="form-title">Criar Conta</h2>
+                <form id="register-form-element">
+                    <div class="form-group">
+                        <label for="register-name">Nome Completo</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">E-mail</label>
+                        <input type="email" id="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Senha</label>
+                        <input type="password" id="register-password" required minlength="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm">Confirmar Senha</label>
+                        <input type="password" id="register-confirm" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Criar Conta</button>
+                </form>
+                <p class="form-switch">
+                    Já tem conta? <a href="#" id="show-login">Fazer login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="modal-close" id="close-payment">&times;</button>
+            <div class="payment-form">
+                <h2 class="form-title">Finalizar Compra</h2>
+                <div class="order-summary">
+                    <h3>Resumo do Pedido</h3>
+                    <div class="order-item">
+                        <span id="order-product"></span>
+                        <span id="order-price"></span>
+                    </div>
+                    <div class="order-total">
+                        <strong>Total: <span id="order-total"></span></strong>
+                    </div>
+                </div>
+                
+                <form id="payment-form">
+                    <h3>Dados do Cartão</h3>
+                    <div class="form-group">
+                        <label for="card-number">Número do Cartão</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="card-expiry">Validade</label>
+                            <input type="text" id="card-expiry" placeholder="MM/AA" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-cvv">CVV</label>
+                            <input type="text" id="card-cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-name">Nome no Cartão</label>
+                        <input type="text" id="card-name" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success btn-full">
+                        Finalizar Pagamento
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal hidden">
+        <div class="modal-content success-content">
+            <div class="success-icon">✅</div>
+            <h2>Pagamento Realizado!</h2>
+            <p>Seu pedido foi processado com sucesso.</p>
+            <button class="btn btn-primary" id="close-success">Continuar Comprando</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

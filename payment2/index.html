@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Login e Pagamento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">MeuShop</h1>
+            <nav class="nav">
+                <button id="btnEntrarConta" class="btn-login">Entrar</button>
+                <button id="btnLogout" class="btn-logout" style="display: none;">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div id="user-info" class="user-info" style="display: none;">
+                <h2>Bem-vindo, <span id="user-name"></span>!</h2>
+            </div>
+
+            <!-- Products Section -->
+            <section class="products">
+                <h2>Nossos Produtos</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Smartphone">
+                        <h3>Smartphone Premium</h3>
+                        <p class="price">R$ 1.299,00</p>
+                        <button class="btn-buy" data-product="Smartphone Premium" data-price="1299.00">Comprar</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Laptop">
+                        <h3>Laptop Gamer</h3>
+                        <p class="price">R$ 2.499,00</p>
+                        <button class="btn-buy" data-product="Laptop Gamer" data-price="2499.00">Comprar</button>
+                    </div>
+                    <div class="product-card">
+                        <img src="/placeholder.svg?height=200&width=200" alt="Fones">
+                        <h3>Fones Bluetooth</h3>
+                        <p class="price">R$ 299,00</p>
+                        <button class="btn-buy" data-product="Fones Bluetooth" data-price="299.00">Comprar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="auth-container">
+                <!-- Login Form -->
+                <div id="loginForm" class="auth-form active">
+                    <h2>Entrar</h2>
+                    <form id="form-login">
+                        <div class="form-group">
+                            <label for="login-email">Email:</label>
+                            <input type="email" id="login-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Senha:</label>
+                            <input type="password" id="login-password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Entrar</button>
+                        <div id="login-mensagem" class="mensagem"></div>
+                    </form>
+                    <p class="switch-form">
+                        Não tem conta? <a href="#" id="showRegister">Cadastre-se</a>
+                    </p>
+                </div>
+
+                <!-- Register Form -->
+                <div id="registerForm" class="auth-form">
+                    <h2>Cadastrar</h2>
+                    <form id="form-cadastro">
+                        <div class="form-group">
+                            <label for="first-name">Nome:</label>
+                            <input type="text" id="first-name" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Sobrenome:</label>
+                            <input type="text" id="last-name" name="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Senha:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirmar Senha:</label>
+                            <input type="password" id="confirm-password" name="confirmPassword" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Cadastrar</button>
+                        <div id="register-mensagem" class="mensagem"></div>
+                    </form>
+                    <p class="switch-form">
+                        Já tem conta? <a href="#" id="showLogin">Entrar</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="payment-container">
+                <h2>Finalizar Compra</h2>
+                <div class="product-summary">
+                    <h3 id="payment-product">Produto</h3>
+                    <p class="payment-price">R$ <span id="payment-price">0,00</span></p>
+                </div>
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="card-number">Número do Cartão:</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="card-expiry">Validade:</label>
+                            <input type="text" id="card-expiry" placeholder="MM/AA" maxlength="5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-cvv">CVV:</label>
+                            <input type="text" id="card-cvv" placeholder="123" maxlength="3" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-name">Nome no Cartão:</label>
+                        <input type="text" id="card-name" placeholder="Nome completo" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Finalizar Pagamento</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
